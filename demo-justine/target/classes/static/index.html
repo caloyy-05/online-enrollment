@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container my-4">
+    <div class="container mt-5">
+        <div class="card p-4 shadow-lg">
+            <h1 class="text-center"><b>Student Applicant Personal Information</b></h1>
+            <form id="enrollmentForm">
+                <div class="mb-3">
+                    <label for="studentNumber" class="form-label">Student Number:</label>
+                    <input type="text" name="studentNumber" class="form-control" id="studentNumber">
+                </div>
+                <div>
+                    <label for="yearLVL" class="form-label">Course and Year:</label>
+                    <div class="mb-3 row">
+                        <div class="col-md-6">
+                            <select name="yearLVL" id="yearLVL" class="form-control" required>
+                                <option value="year" selected hidden>Year</option>
+                                <option value="1st Year" >1</option>
+                                <option value="2nd Year" >2</option>
+                                <option value="3rd Year" >3</option>
+                                <option value="4th Year" >4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select name="courseProg" id="courseProg" class="form-control" required>
+                                <option value="course"selected hidden>Course</option>
+                                <option value="BSDE">Digital Engineering</option>
+                                <option value="BSCOME">Computer Engineering</option>
+                                <option value="BSIE">Industrial Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="mb-4"><b>I - Personal Data</b></h3>
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="firstName" class="form-label">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="middleInitial" class="form-label">Middle Name:</label>
+                        <input type="text" name="middleInitial" id="middleInitial" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-4">
+                        <label for="gender" class="form-label">Gender:</label>
+                        <select class="form-control" name="gender" id="gender">
+                            <option selected hidden value="select">(select)</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="nationality" class="form-label">Nationality:</label>
+                        <input type="text" name="nationality" id="nationality" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-2">
+                        <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+                        <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="placeOfBirth" class="form-label">Place of Birth:</label>
+                        <input type="text" name="placeOfBirth" id="placeOfBirth" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="mobileNumber" class="form-label">Mobile Number:</label>
+                        <input type="text" name="mobileNumber" id="mobileNumber" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="civilStatus" class="form-label">Civil Status:</label>
+                        <div class="mb-3">
+                            <div>
+                                <select class="form-control" name="civilStatus" id="civilStatus">
+                                    <option selected hidden value="">(select)</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="widowOrWidower">Widow/Widower</option>
+                                    <option value="divorced">Divorced</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="mb-4"><b>II - Residence Data</b></h3>
+                <div class="mb-3">
+                    <label for="homeAddress" class="form-label">Apartment Name/House No./Street/Barangay:</label>
+                    <input type="text" name="homeAddress" id="homeAddress" class="form-control" required>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+                        <label for="city" class="form-label">City/Municipality:</label>
+                        <input type="text" name="city" id="city" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="province" class="form-label">Province/State:</label>
+                        <input type="text" name="province" id="province" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" name="country" id="country" class="form-control" placeholder="Philippines" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-6">
+                        <label for="zipCode" class="form-label">Zipcode:</label>
+                        <input type="text" name="zipCode" id="zipCode" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telephoneNumber" class="form-label">Telephone Number:</label>
+                        <input type="text" class="form-control" name="telephoneNumber" id="telephoneNumber" required>
+                    </div>
+                </div>
+                <h3 class="mb-3"><b>III - Family Data</b></h3>
+                <div class="mb-3 row">
+                    <div class="col-md-8">
+                        <label for="fatherName" class="form-label">Fathers Name:</label>
+                        <input type="text" class="form-control" name="fatherName" id="fatherName" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="fatherTelephone" class="form-label">Mobile Number:</label>
+                        <input type="text" class="form-control" name="fatherTelephone" id="fatherTelephone">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-8">
+                        <label for="motherName" class="form-label">Mothers Name:</label>
+                        <input type="text" class="form-control" name="motherName" id="motherName" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="motherTelephone" class="form-label">Mobile Number:</label>
+                        <input type="text" class="form-control" name="motherTelephone" id="motherTelephone" required>
+                    </div>
+                </div>
+                <label class="label"><b>Emergency Contact Data: (if not same as above)</b></label>
+                <div class="mb-3 row">
+                    <div class="col-md-8">
+                        <label for="emergencyContactName" class="form-label">Contact Person Name:</label>
+                        <input type="text" class="form-control" name="emergencyContactName" id="emergencyContactName">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="emergencyContactRelation" class="form-label">Relation:</label>
+                        <input type="text" class="form-control" name="emergencyContactRelation" id="emergencyContactRelation">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="emergencyContactAddress" class="form-label">Apartment Name/House No./Street/Barangay:</label>
+                    <input type="text" name="emergencyContactAddress" id="emergencyContactAddress" class="form-control">
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+                        <label for="emergencyContactCity" class="form-label">City/Municipality:</label>
+                        <input type="text" name="emergencyContactCity" id="emergencyContactCity" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="emergencyContactProvince" class="form-label">Province/State:</label>
+                        <input type="text" name="emergencyContactProvince" id="emergencyContactProvince" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="emergencyContactCountry" class="form-label">Country:</label>
+                        <input type="text" name="emergencyContactCountry" id="emergencyContactCountry" class="form-control" placeholder="Philippines">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-4">
+                        <label for="emergencyContactZipCode" class="form-label">Zipcode:</label>
+                        <input type="text" name="emergencyContactZipCode" id="emergencyContactZipCode" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="emergencyContactTelephone" class="form-label">Telephone Number:</label>
+                        <input type="text" class="form-control" name="emergencyContactTelephone" id="emergencyContactTelephone">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="emergencyContactEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" name="emergencyContactEmail" id="emergencyContactEmail">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-md-2 custom-margin">
+                        <button type="reset" class="btn btn-primary w-100">Reset</button>
+                    </div>
+                    <div class="col-md-8 custom-margin">
+                            <button type="submit" class="btn btn-primary w-100">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewModalLabel">Preview Student Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="previewContent">
+                    <!-- Dynamic content will appear here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                    <button id="confirmSubmit" type="button" class="btn btn-primary">Confirm & Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const form = document.getElementById("enrollmentForm");
+
+    let formDataJson = {};
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Convert form data to JSON
+        const formData = new FormData(this);
+        formDataJson = {};
+        formData.forEach((value, key) => {
+            formDataJson[key] = value.trim();
+        });
+
+        // Optional reformatting
+        if (formDataJson.dateOfBirth) {
+            const dob = new Date(formDataJson.dateOfBirth);
+            formDataJson.dateOfBirth = dob.toISOString().split('T')[0];
+        }
+
+        // Preview HTML content
+        let previewHTML = "<ul class='list-group'>";
+        for (const [key, value] of Object.entries(formDataJson)) {
+            previewHTML += `<li class='list-group-item'><strong>${key}:</strong> ${value}</li>`;
+        }
+        previewHTML += "</ul>";
+
+        document.getElementById("previewContent").innerHTML = previewHTML;
+
+        // Show Bootstrap modal
+        const previewModal = new bootstrap.Modal(document.getElementById("previewModal"));
+        previewModal.show();
+    });
+
+    // When "Confirm & Save" button is clicked
+    document.getElementById("confirmSubmit").addEventListener("click", () => {
+        fetch("http://localhost:8084/api/students", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formDataJson)
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Server error");
+                return response.json();
+            })
+            .then(data => {
+                alert("Student added successfully!");
+                form.reset();
+                bootstrap.Modal.getInstance(document.getElementById("previewModal")).hide();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to add student.");
+            });
+    });
+</script>
+</body>
+</html>

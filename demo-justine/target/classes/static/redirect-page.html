@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Selection</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #800000;
+            height: 100px;
+            width: 100%;
+        }
+
+        .container {
+            background-color: #fbc600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 100px);
+            padding: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .role-button {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 40px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .role-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive text size */
+        @media (max-width: 600px) {
+            .role-button {
+                font-size: 20px;
+                padding: 30px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header"></div>
+<div class="container">
+    <div class="button-group">
+        <button class="role-button" onclick="window.location.href='http://localhost:63342/goodbye/demo/static/home-page.html?_ijt=mgnq84qplgggvbleevgvtamia5&_ij_reload=RELOAD_ON_SAVE'">STUDENT</button>
+        <button class="role-button" onclick="window.location.href='http://localhost:63342/goodbye/demo/static/students.html'">ADMIN</button>
+    </div>
+</div>
+</body>
+</html>

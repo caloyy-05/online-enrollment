@@ -1,0 +1,7 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Times New Roman', serif;
+}
+.form-control {
+    border: rgb(53, 53, 53) solid 1px !important;
+}
